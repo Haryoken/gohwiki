@@ -1,0 +1,16 @@
+{
+"skillList":[
+		{
+			"id":"01001",
+			"name":"Chế Hành",
+			"typeId":"02"
+			"description":"Giai đoạn ra bài, giới hạn 1 lần, bạn có thể bỏ tùy ý một lượng bài, sau đó rút cùng lượng bài đã bỏ. Nếu bằng cách này bỏ đi tất cả bài trên tay, thì bạn được rút thêm 1 lá."
+		},
+		{
+			"id":"01002",
+			"name":"Cứu Viện",
+			"typeId":"01"
+			"description":"Khi người chơi khác thuộc thế lực Ngô tự dùng Đào lên bản thân, nếu sinh lực người đó lớn hơn bạn, thì người này có thể thay đổi thành lệnh bạn hồi 1 sinh lực, và sau đó người này rút thêm 1 lá."
+		}
+]
+}

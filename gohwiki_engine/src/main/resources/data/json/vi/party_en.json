@@ -1,0 +1,23 @@
+{"parties":[
+		{
+			"id":"01",
+			"name":"Wu"
+		},
+		
+			"id":"02",
+			"name":"Shu"
+		},
+		{
+			"id":"03",
+			"name":"Wei"
+		},
+		{
+			"id":"04",
+			"name":"Neutral"
+		},
+		{
+			"id":"05",
+			"name":"God"
+		}
+]
+}

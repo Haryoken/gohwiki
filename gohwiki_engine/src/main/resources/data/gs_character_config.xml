@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--武将在游戏中的配置 包括禁止的武将 点将规则 武将分配概率等,没有和模式挂钩-->
+<CharacterInGameConfig>	
+
+	<!--身份局中武将的使用规则 
+			CharacterUseConfig->DeafultAssignRatio 武将默认的分配概率
+			CharacterUseConfig->ExpLevelRule 经验等级规则,0不使用 1在所有身份场使用 2在新手场使用
+
+			AssignVIPLevelReq:分配武将时需要的VIP等级 
+			AppointVIPLevelReq:点将时需要的VIP条件 AssignRatio:分配概率
+			CanUseDianJiangKa 是否可以使用点将卡点将（如果不配置该武将,默认是可以使用的） 
+			CanUseShenJiangKa 是否可以使用神点将卡点将(如果没有该武将的配置,默认是不可以使用的)
+			ExpLevelReq:分配武将时需要的最低玩家等级 默认值是0 如果VIP条件不为零,这个字段不起作用(只在身份局中起作用)
+	-->
+	<!--只要玩家开通了某个武将 该武将的所有VIP规则都不适用-->
+	<CharacterUseConfig DeafultAssignRatio="10" OnlyBeginnerUseExpLv="0">
+		<!--标准包-->
+		<UseInfo ChrId="1" 	ChrName="刘备" 		ExpLevelReq="0" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		<UseInfo ChrId="15" ChrName="曹操" 		ExpLevelReq="0" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		<UseInfo ChrId="8" 	ChrName="孙权" 		ExpLevelReq="0" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		<UseInfo ChrId="6" 	ChrName="马超" 		ExpLevelReq="0" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		<UseInfo ChrId="17" ChrName="夏侯惇" 	ExpLevelReq="0" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		
+		<UseInfo ChrId="3" 	ChrName="张飞" 		ExpLevelReq="1" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		
+		<UseInfo ChrId="18" ChrName="张辽" 		ExpLevelReq="2" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		
+		<UseInfo ChrId="7" 	ChrName="黄月英" 	ExpLevelReq="3" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		
+		<UseInfo ChrId="20" ChrName="郭嘉" 		ExpLevelReq="4" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		
+		<UseInfo ChrId="2" 	ChrName="关羽" 		ExpLevelReq="5" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		
+		<UseInfo ChrId="10" ChrName="吕蒙" 		ExpLevelReq="6" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		<UseInfo ChrId="23" ChrName="吕布" 		ExpLevelReq="6" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		<UseInfo ChrId="25" ChrName="孙尚香" 	ExpLevelReq="6" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		
+		<UseInfo ChrId="21" ChrName="甄姬" 		ExpLevelReq="7" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		<UseInfo ChrId="11" ChrName="黄盖" 		ExpLevelReq="7" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		<UseInfo ChrId="13" ChrName="大乔" 		ExpLevelReq="7" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		
+		<UseInfo ChrId="4" 	ChrName="诸葛亮" 	ExpLevelReq="8" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		<UseInfo ChrId="5" 	ChrName="赵云" 		ExpLevelReq="8" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		<UseInfo ChrId="24" ChrName="貂蝉" 		ExpLevelReq="8" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		
+		<UseInfo ChrId="12" ChrName="周瑜" 		ExpLevelReq="9" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		<UseInfo ChrId="16" ChrName="司马懿" 	ExpLevelReq="9" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		<UseInfo ChrId="19" ChrName="许褚" 		ExpLevelReq="9" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		
+		
+		<UseInfo ChrId="9" ChrName="甘宁" 		ExpLevelReq="10" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		<UseInfo ChrId="14" ChrName="陆逊" 		ExpLevelReq="10" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		<UseInfo ChrId="22" ChrName="华佗" 		ExpLevelReq="10" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		
+		
+		<UseInfo ChrId="28" ChrName="夏侯渊" 	ExpLevelReq="11" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		<UseInfo ChrId="26" ChrName="黄忠" 		ExpLevelReq="11" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		
+		<UseInfo ChrId="29" ChrName="曹仁" 		ExpLevelReq="12" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		<UseInfo ChrId="31" ChrName="周泰" 		ExpLevelReq="12" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		
+		<UseInfo ChrId="27" ChrName="魏延" 		ExpLevelReq="13" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		<UseInfo ChrId="30" ChrName="小乔" 		ExpLevelReq="13" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		
+		<UseInfo ChrId="32" ChrName="张角" 		ExpLevelReq="14" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		<UseInfo ChrId="33" ChrName="于吉" 		ExpLevelReq="15" 	AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="10" CanUseDianJiangKa="1" CanUseShenJiangKa="0" />
+		
+	
+
+		
+		<!--火包-->
+		<UseInfo ChrId="34" ChrName="典韦" AssignVIPLevelReq="1" AppointVIPLevelReq="1" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="35" ChrName="荀彧" AssignVIPLevelReq="1" AppointVIPLevelReq="1" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="36" ChrName="庞统" AssignVIPLevelReq="1" AppointVIPLevelReq="1" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="37" ChrName="卧龙诸葛亮" AssignVIPLevelReq="1" AppointVIPLevelReq="1" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="38" ChrName="太史慈" AssignVIPLevelReq="1" AppointVIPLevelReq="1" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="39" ChrName="庞德" AssignVIPLevelReq="1" AppointVIPLevelReq="1" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="40" ChrName="颜良 文丑" AssignVIPLevelReq="1" AppointVIPLevelReq="1" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="41" ChrName="袁绍" AssignVIPLevelReq="1" AppointVIPLevelReq="1" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+
+		<!--林包-->
+		<UseInfo ChrId="42" ChrName="徐晃" AssignVIPLevelReq="65536" AppointVIPLevelReq="65536" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="43" ChrName="曹丕" AssignVIPLevelReq="1" AppointVIPLevelReq="1" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="44" ChrName="孙坚" AssignVIPLevelReq="65536" AppointVIPLevelReq="65536" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="45" ChrName="董卓" AssignVIPLevelReq="65536" AppointVIPLevelReq="65536" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="46" ChrName="祝融" AssignVIPLevelReq="65536" AppointVIPLevelReq="65536" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="47" ChrName="孟获" AssignVIPLevelReq="0" AppointVIPLevelReq="0" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="48" ChrName="贾诩" AssignVIPLevelReq="65536" AppointVIPLevelReq="65536" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="49" ChrName="鲁肃" AssignVIPLevelReq="65536" AppointVIPLevelReq="65536" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+
+		<!--山包-->
+		<UseInfo ChrId="50" ChrName="张郃" AssignVIPLevelReq="65536" AppointVIPLevelReq="65536" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="51" ChrName="邓艾" AssignVIPLevelReq="65536" AppointVIPLevelReq="65536" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="52" ChrName="姜维" AssignVIPLevelReq="65536" AppointVIPLevelReq="65536" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="53" ChrName="刘禅" AssignVIPLevelReq="65536" AppointVIPLevelReq="65536" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="54" ChrName="孙策" AssignVIPLevelReq="65536" AppointVIPLevelReq="65536" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="55" ChrName="张昭 张纮" AssignVIPLevelReq="65536" AppointVIPLevelReq="65536" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="56" ChrName="左慈" AssignVIPLevelReq="65536" AppointVIPLevelReq="65536" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="57" ChrName="蔡文姬" AssignVIPLevelReq="65536" AppointVIPLevelReq="65536" AssignRatio="40" CanUseDianJiangKa="1" CanUseShenJiangKa="0"/>
+		
+		
+		<!--神将-->
+		<UseInfo ChrId="201" ChrName="神关羽" AssignVIPLevelReq="65536" AppointVIPLevelReq="0"  AssignRatio="40" CanUseDianJiangKa="0" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="202" ChrName="神吕蒙" AssignVIPLevelReq="65536" AppointVIPLevelReq="0"  AssignRatio="40" CanUseDianJiangKa="0" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="203" ChrName="神周瑜" AssignVIPLevelReq="65536" AppointVIPLevelReq="0"  AssignRatio="40" CanUseDianJiangKa="0" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="204" ChrName="神诸葛亮" AssignVIPLevelReq="65536" AppointVIPLevelReq="0"  AssignRatio="40" CanUseDianJiangKa="0" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="205" ChrName="神曹操" AssignVIPLevelReq="65536" AppointVIPLevelReq="0"  AssignRatio="40" CanUseDianJiangKa="0" CanUseShenJiangKa="0"/>
+		<UseInfo ChrId="206" ChrName="神吕布" AssignVIPLevelReq="65536" AppointVIPLevelReq="0"  AssignRatio="40" CanUseDianJiangKa="0" CanUseShenJiangKa="0"/>
+		
+
+	</CharacterUseConfig>
+
+	<!--分配武将的个数-->
+	<GeneralSlotCount DefaultCount="3" LordDefaultCount="3">		
+		<!--ConfigExp用来表示每个经验等级可以分配的武将个数(不包括主公),如果不配置会按照默认值处理(DefaultCount)-->
+		<Config ExpLv="[min-0][max-6]" Count="1"/>
+		<Config ExpLv="[min-7][max-8]" Count="2"/>
+		
+		<!--ConfigVIP用来表示每个VIP等级额外的武将个数,没有配置的VIP等级，默认count=0-->
+		<ConfigVIP VIPLv="[min-1][max-2]" Count="1"/>
+		<ConfigVIP VIPLv="[min-3][max-5]" Count="2"/>
+		<ConfigVIP VIPLv="[min-6][max-65536]" Count="3"/>
+	</GeneralSlotCount>
+	
+	<!--禁止出场的武将(不同的模式中禁止的不一样)-->
+	<BanCharacterConfig>
+		<!--于模式相关的 
+			Modle：模式,必须配置 
+			Section：场设置 1:所有场 2:初级场 3:自由场 4:中级场 5:高级场 6:至尊场 7:比赛 8:教学
+			注:判断武将是否被禁止,先找到与具体场有关的配置,如果没有在寻找场为Section="1"的配置(所有场的配置)
+		-->		
+		<GameModel Desc="标准场禁止武将" Modle="22" Section="1">神话在林模式下的所有场
+			<BanChr ChrId="2" ChrName="关羽"/>
+			<BanChr ChrId="3" ChrName="张飞"/>
+			<BanChr ChrId="4" ChrName="诸葛亮"/>
+			<BanChr ChrId="5" ChrName="赵云"/>
+			<BanChr ChrId="6" ChrName="马超"/>
+			<BanChr ChrId="7" ChrName="黄月英"/>
+			<BanChr ChrId="9" ChrName="甘宁"/>
+			<BanChr ChrId="10" ChrName="吕蒙"/>
+			<BanChr ChrId="11" ChrName="黄盖"/>
+			<BanChr ChrId="12" ChrName="周瑜"/>
+			<BanChr ChrId="13" ChrName="大乔"/>
+			<BanChr ChrId="14" ChrName="陆逊"/>
+			<BanChr ChrId="25" ChrName="孙尚香"/>
+			<BanChr ChrId="16" ChrName="司马懿"/>
+			<BanChr ChrId="17" ChrName="夏侯惇"/>
+			<BanChr ChrId="18" ChrName="张辽"/>
+			<BanChr ChrId="19" ChrName="许褚"/>
+			<BanChr ChrId="20" ChrName="郭嘉"/>
+			<BanChr ChrId="21" ChrName="甄姬"/>
+			<BanChr ChrId="22" ChrName="华佗"/>
+			<BanChr ChrId="23" ChrName="吕布"/>
+			<BanChr ChrId="24" ChrName="貂蝉"/>
+		</GameModel>
+    <GameModel Desc="单机版,8人局禁止武将 身份模式 8人局1个内奸 " Modle="1" Section="1">
+      <BanChr ChrId="33" ChrName="于吉"/>
+      <BanChr ChrId="48" ChrName="贾诩"/>
+    </GameModel>
+    <GameModel Desc="单机版,8人局禁止武将 身份模式 8人局2个内奸 " Modle="2" Section="1">
+      <BanChr ChrId="33" ChrName="于吉"/>
+      <BanChr ChrId="48" ChrName="贾诩"/>
+    </GameModel>
+    <GameModel Desc="单机版,8人局禁止武将 身份模式 7人局1个内奸 " Modle="3" Section="1">
+      <BanChr ChrId="33" ChrName="于吉"/>
+      <BanChr ChrId="48" ChrName="贾诩"/>
+    </GameModel>
+    <GameModel Desc="单机版,8人局禁止武将 身份模式 6人局1个内奸 " Modle="4" Section="1">
+      <BanChr ChrId="33" ChrName="于吉"/>
+      <BanChr ChrId="48" ChrName="贾诩"/>
+    </GameModel>
+
+    <GameModel Desc="单机版,8人局禁止武将 身份模式 5人局1个内奸 普通场 " Modle="5" Section="1">
+      <BanChr ChrId="33" ChrName="于吉"/>
+      <BanChr ChrId="48" ChrName="贾诩"/>
+    </GameModel>
+    <GameModel Desc="单机版,8人局禁止武将 身份模式 5人局1个内奸 简易场 " Modle="6" Section="1">
+      <BanChr ChrId="33" ChrName="于吉"/>
+      <BanChr ChrId="48" ChrName="贾诩"/>
+    </GameModel>
+    <GameModel Desc="单机版,8人局禁止武将 身份模式 9人局2个内奸 " Modle="7" Section="1">
+      <BanChr ChrId="33" ChrName="于吉"/>
+      <BanChr ChrId="48" ChrName="贾诩"/>
+    </GameModel>
+
+    <GameModel Desc="单机版,8人局禁止武将 8人欢乐场" Modle="12" Section="1">
+      <BanChr ChrId="33" ChrName="于吉"/>
+      <BanChr ChrId="48" ChrName="贾诩"/>
+    </GameModel>
+    <GameModel Desc="单机版,8人局禁止武将 8人军争" Modle="15" Section="1">
+      <BanChr ChrId="33" ChrName="于吉"/>
+      <BanChr ChrId="48" ChrName="贾诩"/>
+    </GameModel>
+    <GameModel Desc="单机版,8人局禁止武将 5人军争 " Modle="16" Section="1">
+      <BanChr ChrId="33" ChrName="于吉"/>
+      <BanChr ChrId="48" ChrName="贾诩"/>
+    </GameModel>
+	</BanCharacterConfig>
+	
+	<!--1v1场4禁的武将配置-->
+	<Ban1v14CharacterCfg>
+		<BanChr ChrId="8" ChrName="孙权"/>
+		<BanChr ChrId="22" ChrName="华佗"/>
+		<BanChr ChrId="15" ChrName="曹操"/>
+		<BanChr ChrId="10" ChrName="吕蒙"/>
+    <BanChr ChrId="33" ChrName="于吉"/><!--  单机版 移除于吉 -->
+	</Ban1v14CharacterCfg>
+	
+	<!--互斥武将(不能同时出现在场上)-->
+	<CharacterMutexConfig>
+		<ChrMutex MutexList="24;102;109"/>貂蝉 sp貂蝉 sp貂蝉2012
+		<ChrMutex MutexList="5;108"/>赵云 sp赵云2012
+		<ChrMutex MutexList="103;25"/>孙尚香 sp孙尚香
+		<ChrMutex MutexList="107;6"/>SP马超 马超
+		<ChrMutex MutexList="39;105"/>庞德 SP庞德 
+		<ChrMutex MutexList="110;48"/>贾诩 SP贾诩
+		<ChrMutex MutexList="29;111"/>曹仁 SP曹仁
+		<ChrMutex MutexList="57;112"/>蔡文姬 SP蔡文姬
+	</CharacterMutexConfig>
+
+	<!--sp武将选择列表-->	
+	<CharacterSPSelectConfig>
+		<ChrSPList List="24;102;109"/>貂蝉的sp武将列表
+		<ChrSPList List="5;108"/>赵云的sp武将列表
+		<ChrSPList List="103;25"/>孙尚香的sp武将列表
+		<ChrSPList List="107;6"/>马超的sp武将列表
+		<ChrSPList List="39;105"/>庞德 SP庞德 
+		<ChrSPList List="110;48"/>贾诩 SP贾诩
+		<ChrSPList List="29;111"/>曹仁 SP曹仁
+		<ChrSPList List="57;112"/>蔡文姬 SP蔡文姬
+	</CharacterSPSelectConfig>
+
+	<!--左慈可以抽取的武将列表,ChrIdList用","分割-->
+	<ZuoCiSelChrConfig>
+		<SelChr Desc="所有标准武将" MeetAssignCondition="0" ChrIdList="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25"/>
+		<SelChr Desc="所有风包"     MeetAssignCondition="0" ChrIdList="26,27,28,29,30,31,32,33"/>
+		<SelChr Desc="所有火包"     MeetAssignCondition="0" ChrIdList="34,35,36,37,38,39,40,41"/>
+		<SelChr Desc="所有林包"     MeetAssignCondition="0" ChrIdList="42,43,44,45,46,47,48,49"/>
+		<SelChr Desc="所有山包"     MeetAssignCondition="0" ChrIdList="50,51,52,53,54,55,56,57"/>
+		<!--<SelChr Desc="所有一将"     MeetAssignCondition="0" ChrIdList="151,152,153,154,155,156,157,158,159,160,161"/>-->
+		
+		<!--sp将：袁术[100] 公孙瓒[101] sp貂蝉[102] sp香香[103] sp庞德[105] sp马超[107] sp贾诩[110]-->
+		<!--<SelChr Desc="sp将"     MeetAssignCondition="0" ChrIdList="100,101,102,103,105,107,110"/>-->
+		
+		<!--神将： 神关羽[201] 神吕蒙[202] 神周瑜[203] 神诸葛亮[204] 神曹操[205] 神吕布[206]-->
+		<!--<SelChr Desc="神将"     MeetAssignCondition="0" ChrIdList="201,202,203,204,205,206"/>-->
+	</ZuoCiSelChrConfig>
+	
+	<!--身份局武将分配规则,武将分配是按照Chr的顺序进行分配的,任何武将的分配都必须满足的第一规则是:这个房间必须开通该武将对应的扩展包-->
+	<CharacterAssignRuleInFigure>
+		<!--自定义武将列表-->
+		<Group Id="1" CharList="26,27,28,29,30,31,32,33"/>
+		<Group Id="2" CharList="34,35,36,37,38,39,40,41"/>
+		<Group Id="3" CharList="42,43,44,45,46,47,48,49"/>
+		
+		<!--
+			Desc:描述 
+			UseAssignCondition		分配的时候是否需要满足使用条件,如果此时Group=0，表示随机分配并且是按照概率
+			bForceCanUse 			强制可以使用(即使该武将不满足分配规则)
+		-->
+		
+		<!--主公默认武将-->
+		<EmperorDefault>
+			<EmChr ChrId="1"  ChrName="刘备" UseAssignCondition="0" bForceCanUse="0"/>
+			<EmChr ChrId="8"  ChrName="孙权" UseAssignCondition="0" bForceCanUse="0"/>
+			<EmChr ChrId="15" ChrName="曹操" UseAssignCondition="0" bForceCanUse="0"/>
+			<EmChr ChrId="32" ChrName="张角" UseAssignCondition="0" bForceCanUse="0"/>
+			<EmChr ChrId="41" ChrName="袁绍" UseAssignCondition="0" bForceCanUse="0"/>
+			<EmChr ChrId="43" ChrName="曹丕" UseAssignCondition="0" bForceCanUse="0"/>
+			<EmChr ChrId="45" ChrName="董卓" UseAssignCondition="0" bForceCanUse="0"/>
+		</EmperorDefault>
+		
+		<GameModelAssign Desc="全局配置" Modle="22" Section="1">神话在林下的所有场
+			<!--主公其它的武将分配 Kind=1表示主公 Kind=0表示除主公外的其它人-->
+			<AssignRule Kind="1">
+				<Chr ExtraPos="0" GroupId="2" Desc="火包" UseAssignCondition="0" bForceCanUse="0"/>
+				<Chr ExtraPos="0" GroupId="3" Desc="林包" UseAssignCondition="0" bForceCanUse="0"/>
+				<Chr ExtraPos="1" GroupId="0" Desc="全部" UseAssignCondition="0" bForceCanUse="0"/>
+				<Chr ExtraPos="1" GroupId="0" Desc="全部" UseAssignCondition="0" bForceCanUse="0"/>
+			</AssignRule>
+			<!--其它玩家武将选择如果没有配置就随机分配 SeatPos表示从主公的位置开始的第几号位, 等于0时，表示所有的位置-->
+			<AssignRule Kind="0">
+				<Chr ExtraPos="0" GroupId="1" Desc="风包" UseAssignCondition="0" bForceCanUse="0"/>
+				<Chr ExtraPos="0" GroupId="2" Desc="火包" UseAssignCondition="0" bForceCanUse="0"/>
+				<Chr ExtraPos="0" GroupId="3" Desc="曹操" UseAssignCondition="0" bForceCanUse="0"/>
+				<Chr ExtraPos="1" GroupId="0" Desc="全部" UseAssignCondition="0" bForceCanUse="0"/>
+				<Chr ExtraPos="1" GroupId="0" Desc="全部" UseAssignCondition="0" bForceCanUse="0"/>
+			</AssignRule>
+		</GameModelAssign>
+	</CharacterAssignRuleInFigure>
+	
+	<!--智能点将卡 推送武将配置-->
+	<CharacterSelectRecommend>
+		<!--武将id:   1刘备, 2关羽, 3张飞, 4诸葛亮, 5赵云, 6马超, 7黄月英, 8孙权, 9甘宁, 10吕蒙, 11黄盖, 12周瑜, 13大乔, 14陆逊, 15曹操, 16司马懿, 17夏侯惇, 18张辽, 19许褚, 20郭嘉, 21甄姬, 22华佗, 23吕布, 24貂蝉, 25孙尚香, 26黄忠, 27魏延, 28夏侯渊, 29曹仁, 30小乔, 31周泰, 32张角, 33于吉, 34典韦, 35荀彧, 36庞统, 37卧龙诸葛亮, 38太史慈, 39庞德, 40颜良&文丑, 41袁绍, 42徐晃, 43曹丕, 44孙坚, 45董卓, 46祝融, 47孟获, 48贾诩, 49鲁肃, 50张颌, 51邓艾, 52姜维, 53刘禅, 54孙策, 55张昭&张弘, 56左慈, 57蔡文姬, 100袁术, 101公孙瓒, 102SP貂蝉, 103SP孙尚香, 104杨修, 105SP庞德, 106SP关羽, 151曹植, 152高顺, 153陈宫, 154法正, 155凌统, 156马谡, 157吴国太, 158徐盛, 159徐庶, 160于禁, 161张春华, 201神关羽, 202神吕蒙, 203神周瑜, 204神诸葛亮, 205神曹操, 206神吕布, 207神赵云, 208神司马懿,-->
+		<!--扩展包id: 1普通, 4风, 5火, 6林, 7山, 8神, 9onine专属武将, 10一将成名A, 11一将成名B-->
+		<!--身份id:   1主公, 2忠臣, 3反贼, 4内奸-->
+		
+		
+	</CharacterSelectRecommend>
+</CharacterInGameConfig>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

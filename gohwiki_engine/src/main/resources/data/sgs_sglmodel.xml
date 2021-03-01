@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SingleModel>
+    <Model modelid= "16" singleparam = "3" modeldesc = "5人军争场" />
+    <Model modelid= "15" singleparam = "4" modeldesc = "8人军争场" />
+    <Model modelid= "5"  singleparam = "1" modeldesc = "5人标准场" />
+    <Model modelid= "1"  singleparam = "2" modeldesc = "8人标准场" />
+    <!-- <Model modelid= "20" singleparam = "5" modeldesc = "新手场" /> -->
+</SingleModel>
