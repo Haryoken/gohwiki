@@ -1,5 +1,7 @@
 package com.csh.hann.gohwiki.engine.util;
 
+import android.content.Context;
+
 import com.csh.hann.gohwiki.engine.entities.Data;
 import com.csh.hann.gohwiki.engine.entities.Hero;
 import com.csh.hann.gohwiki.engine.entities.HeroDetails;
@@ -21,22 +23,24 @@ import org.json.simple.JSONObject;
 import java.util.List;
 
 public class DataLoader {
-    private static String FILE_DIRECTORY = "src/main/resources/data/json/";
+    private static String FILE_DIRECTORY = "app/src/main/res/data/json/";
     private static String JSON_EXTENSION = ".json";
-    private static String SKILL_TYPE_FILE_NAME = "skillType";
+    private static String SKILL_TYPE_FILE_NAME = "skilltype";
     private static String PARTY_FILE_NAME = "party";
     private static String HERO_FILE_NAME = "hero";
     private static String SKILL_FILE_NAME = "skill";
-    private static String HERO_DETAILS_FILE_NAME = "heroDetails";
-    private static String HERO_DETAILS_SKILL_FILE_NAME = "heroDetailsSkill";
+    private static String HERO_DETAILS_FILE_NAME = "herodetails";
+    private static String HERO_DETAILS_SKILL_FILE_NAME = "herodetailsskill";
     protected Data data;
-
-    public DataLoader() {
+    private Context context;
+    public DataLoader(Context context) {
         this.data = new Data();
+        this.context = context;
     }
 
-    public DataLoader(Data data) {
+    public DataLoader(Data data,Context context) {
         this.data = data;
+        this.context = context;
     }
 
     public Data getData() {
@@ -65,12 +69,13 @@ public class DataLoader {
     }
 
     private String getNameFile(String fileName,Language lang){
-        fileName = FILE_DIRECTORY + lang.getValue() + "/" +fileName+"_"+lang.getValue()+JSON_EXTENSION;
+//        fileName = FILE_DIRECTORY + lang.getValue() + "/" +fileName+"_"+lang.getValue()+JSON_EXTENSION;
+        fileName = fileName + "_" + lang.getValue();
         return  fileName;
     }
     protected List<SkillType> loadSkillType(Language lang) {
         String fileName = getNameFile(SKILL_TYPE_FILE_NAME,lang);
-        JSONObject jsonObject = JsonHelper.readJsonFromFile(fileName);
+        JSONObject jsonObject = JsonHelper.readJsonFromFile(fileName, context);
         JsonHelper<SkillTypeJson> jsonHelper = new JsonHelper<>();
         SkillTypeJson skillTypeJson = jsonHelper.objectMapping(jsonObject,SkillTypeJson.class);
         List<SkillType> skillTypeList = skillTypeJson.getSkillTypeList();
@@ -79,7 +84,7 @@ public class DataLoader {
 
     protected List<Party> loadParty(Language lang) {
         String fileName = getNameFile(PARTY_FILE_NAME,lang);
-        JSONObject jsonObject = JsonHelper.readJsonFromFile(fileName);
+        JSONObject jsonObject = JsonHelper.readJsonFromFile(fileName, context);
         JsonHelper<PartyJson> jsonHelper = new JsonHelper<>();
         PartyJson partyJson = jsonHelper.objectMapping(jsonObject,PartyJson.class);
         List<Party> partyList = partyJson.getPartyList();
@@ -88,7 +93,7 @@ public class DataLoader {
 
     protected List<Hero> loadHero(Language lang) {
         String fileName = getNameFile(HERO_FILE_NAME,lang);
-        JSONObject jsonObject = JsonHelper.readJsonFromFile(fileName);
+        JSONObject jsonObject = JsonHelper.readJsonFromFile(fileName, context);
         JsonHelper<HeroJson> jsonHelper = new JsonHelper<>();
         HeroJson heroJson = jsonHelper.objectMapping(jsonObject,HeroJson.class);
         List<Hero> partyList = heroJson.getHeroList();
@@ -97,7 +102,7 @@ public class DataLoader {
 
     protected List<Skill> loadSkill(Language lang) {
         String fileName = getNameFile(SKILL_FILE_NAME,lang);
-        JSONObject jsonObject = JsonHelper.readJsonFromFile(fileName);
+        JSONObject jsonObject = JsonHelper.readJsonFromFile(fileName, context);
         JsonHelper<SkillJson> jsonHelper = new JsonHelper<>();
         SkillJson skillJson = jsonHelper.objectMapping(jsonObject,SkillJson.class);
         List<Skill> partyList = skillJson.getSkillList();
@@ -106,7 +111,7 @@ public class DataLoader {
 
     protected List<HeroDetails> loadHeroDetails(Language lang) {
         String fileName = getNameFile(HERO_DETAILS_FILE_NAME,lang);
-        JSONObject jsonObject = JsonHelper.readJsonFromFile(fileName);
+        JSONObject jsonObject = JsonHelper.readJsonFromFile(fileName, context);
         JsonHelper<HeroDetailsJson> jsonHelper = new JsonHelper<>();
         HeroDetailsJson heroDetailsJson = jsonHelper.objectMapping(jsonObject,HeroDetailsJson.class);
         List<HeroDetails> partyList = heroDetailsJson.getHeroDetails();
@@ -115,7 +120,7 @@ public class DataLoader {
 
     protected List<HeroDetailsSkill> loadHeroDetailsSkill(Language lang) {
         String fileName = getNameFile(HERO_DETAILS_SKILL_FILE_NAME,lang);
-        JSONObject jsonObject = JsonHelper.readJsonFromFile(fileName);
+        JSONObject jsonObject = JsonHelper.readJsonFromFile(fileName, context);
         JsonHelper<HeroDetailsSkillJson> jsonHelper = new JsonHelper<>();
         HeroDetailsSkillJson heroDetailsSkillJson = jsonHelper.objectMapping(jsonObject,HeroDetailsSkillJson.class);
         List<HeroDetailsSkill> heroDetailsSkillsList = heroDetailsSkillJson.getHeroDetailsSkills();

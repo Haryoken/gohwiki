@@ -1,0 +1,24 @@
+{
+"partyList":[
+		{
+			"id":"01",
+			"name":"Ngô"
+		},
+		{
+			"id":"02",
+			"name":"Thục"
+		},
+		{
+			"id":"03",
+			"name":"Ngụy"
+		},
+		{
+			"id":"04",
+			"name":"Quần Hùng"
+		},
+		{
+			"id":"05",
+			"name":"Thần"
+		}
+]
+}

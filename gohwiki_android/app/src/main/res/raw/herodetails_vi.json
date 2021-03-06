@@ -1,0 +1,17 @@
+{
+"heroDetails":[
+		{
+			"id":"01010001",
+			"heroId":"01",
+			"partyId":"01",
+			"emperor":true,
+			"type":"Giới",
+			"hp":4,
+			"skillId1":"01001",
+			"skillId2":"01002",
+			"skillId3":"none",
+			"skillId4":"none",
+			"skillId5":"none"
+		}		
+]
+}

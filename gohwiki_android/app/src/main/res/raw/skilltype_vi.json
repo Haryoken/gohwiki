@@ -1,0 +1,28 @@
+{
+"skillTypeList":[
+		{
+			"id":"01",
+			"name":"Chủ Công Kỹ"	
+		},
+		{
+			"id":"02",
+			"name":" "	
+		},
+		{
+			"id":"03",
+			"name":"Tọa Định Kỹ"	
+		},
+		{
+			"id":"03",
+			"name":"Hạn Định Kỹ"	
+		},
+		{
+			"id":"04",
+			"name":"Giác Tỉnh Kỹ"	
+		},
+		{
+			"id":"05",
+			"name":"Chuyển Hoán Kỹ"	
+		}
+]
+}

@@ -1,0 +1,12 @@
+{
+"heroDetailsSkills":[
+		{
+			"heroDetailsId":"01010001",
+			"skillId":"01001"
+		},
+		{
+			"heroDetailsId":"01010001",
+			"skillId":"01002"
+		}
+]
+}

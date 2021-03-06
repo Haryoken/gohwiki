@@ -2,24 +2,37 @@ package com.csh.hann.gohwiki.engine.util;
 
 
 
+import android.content.Context;
+import android.content.res.AssetManager;
+import android.content.res.Resources;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
+
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 public class JsonHelper<T> {
-
     public static JSONObject readJsonFromFile(String fileName){
+        return null;
+    }
+        private static final String DATA_FOLDER = "raw";
+        public static JSONObject readJsonFromFile(String fileName, Context context){
         JSONParser jsonParser = new JSONParser();
 
-        try (FileReader reader = new FileReader(fileName))
-        {
+        try {
+            Resources res = context.getResources();
+            InputStream fis = res.openRawResource(res.getIdentifier(fileName,DATA_FOLDER,context.getPackageName()));
+            BufferedReader bfr = new BufferedReader(new InputStreamReader(fis));
             //Read JSON file
-            return (JSONObject)jsonParser.parse(reader);
+
+            return (JSONObject)jsonParser.parse(bfr);
 
 
         } catch (FileNotFoundException e) {

@@ -1,6 +1,10 @@
 package com.csh.hann.gohwiki.engine.services;
 
+import android.content.Context;
+
 import com.csh.hann.gohwiki.engine.entities.*;
+import com.csh.hann.gohwiki.engine.enums.Language;
+import com.csh.hann.gohwiki.engine.util.DataLoader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +20,25 @@ public class MainService {
 
     public MainService(PartyService partyService, SkillTypeService skillTypeService, SkillService skillService,
                        HeroService heroService, HeroDetailsService heroDetailsService, HeroDetailsSkillService heroDetailsSkillService) {
+        this.partyService = partyService;
+        this.skillTypeService = skillTypeService;
+        this.skillService = skillService;
+        this.heroService = heroService;
+        this.heroDetailsService = heroDetailsService;
+        this.heroDetailsSkillService = heroDetailsSkillService;
+    }
+
+    public MainService(Language language, Context context){
+        DataLoader dataLoader = new DataLoader(context);
+        Data data = dataLoader.loadData(language);
+
+        PartyService partyService = new PartyService(data.getPartyList());
+        HeroService heroService = new HeroService(data.getHeroList());
+        SkillTypeService skillTypeService = new SkillTypeService(data.getSkillTypeList());
+        SkillService skillService = new SkillService(data.getSkillList());
+        HeroDetailsService heroDetailsService = new HeroDetailsService(data.getHeroDetails());
+        HeroDetailsSkillService heroDetailsSkillService = new HeroDetailsSkillService(data.getHeroDetailsSkills());
+
         this.partyService = partyService;
         this.skillTypeService = skillTypeService;
         this.skillService = skillService;
@@ -49,6 +72,10 @@ public class MainService {
             this.finalizeHRData(herodetails);
         }
         return heroDetailsList;
+    }
+
+    public List<Hero> getAllHeroes(){
+        return heroService.getHeroList();
     }
 
     private HeroDetails finalizeHRData(HeroDetails heroDetails){
@@ -89,4 +116,6 @@ public class MainService {
         heroDetails.setHero(hero);
         return heroDetails;
     }
+
+
 }
